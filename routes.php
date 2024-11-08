@@ -1,10 +1,13 @@
 <?php
 
 use App\Controllers\PublicController;
-use App\Router;
+use App\Route;
 
-Router::addRoute('/', [PublicController::class, 'index']);
+Route::get('/', [PublicController::class, 'index']);
 
-Router::addRoute('/us', [PublicController::class, 'us']);
+Route::get('/us', [PublicController::class, 'us']);
 
-Router::addRoute('/tech', [PublicController::class, 'tech']);
+Route::get('/tech', [PublicController::class, 'tech']);
+
+Route::get('/form', [PublicController::class, 'form']);
+Route::post('/answer', [PublicController::class, 'answer']);
