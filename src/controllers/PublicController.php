@@ -2,29 +2,22 @@
 
 namespace App\Controllers;
 
-use App\DB;
 use App\Models\Post;
 use App\Models\User;
 
 class PublicController {
     public function index() {
-        $db = new DB();
-        $posts = $db->all('posts', Post::class);
-        dump($posts);
-        $users = $db->all('users', User::class);
-        dd($users);
+        $posts = Post::all();
         view('index', compact('posts'));
     }
 
     public function us() {
-        $db = new DB();
-        $posts = $db->all('posts', Post::class);
+        $posts = Post::all();
         view('us', compact('posts'));
     }
 
     public function tech() {
-        $db = new DB();
-        $posts = $db->all('posts', Post::class);
+        $posts = Post::all();
         view('tech', compact('posts'));
     }
 

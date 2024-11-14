@@ -10,10 +10,12 @@ spl_autoload_register(function ($className) {
     require_once __DIR__ . '/../src/' . $className . '.php';
 });
 
+session_start();
+
 require_once __DIR__ . '/../helpers.php';
 require_once __DIR__ . '/../routes.php';
 
-$router = new App\Router($_SERVER['REQUEST_URI']);
+$router = new App\Router($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
 $match = $router->match();
 if($match){
     if(is_callable($match->getAction())){
