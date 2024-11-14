@@ -5,6 +5,9 @@
 
 <?php foreach($posts as $post): ?>
     <article class="blog-post">
+        <?php if($post->image): ?>
+            <img sc="<?=$post->image?>" class="w-100">
+        <?php endif; ?>
         <h2 class="display-5 link-body-emphasis mb-1"><?=$post['title']?></h2>
         <p class="blog-post-meta"><?=$post['created_at']?> by <a href="#"><?=$post['author']?></a></p>
         <p><?=$post['body']?></p>
