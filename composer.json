@@ -12,5 +12,7 @@
             "email": "ursulaainso@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "symfony/var-dumper": "^7.1"
+    }
 }
