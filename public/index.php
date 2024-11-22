@@ -3,13 +3,6 @@ if (preg_match('/\.(?:png|jpg|jpeg|gif|webp|css|js)$/', $_SERVER["REQUEST_URI"])
     return false;    // serve the requested resource as-is.
 }
 
-spl_autoload_register(function ($className) {
-    $parts = explode('\\', $className);
-    unset($parts[0]);
-    $className = implode('/', $parts);
-    require_once __DIR__ . '/../src/' . $className . '.php';
-});
-
 require __DIR__ . '/../vendor/autoload.php';
 
 session_start();

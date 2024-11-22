@@ -21,8 +21,8 @@
 </head>
 
 <body>
-  <?php include __DIR__ "/themetoggle.php" ?>
+  <?php include  __DIR__ . '/themetoggle.php' ?>
 
-  <?php include __DIR__ "/nav.php" ?>
+  <?php include  __DIR__ . '/nav.php' ?>
 
   <main class="container">

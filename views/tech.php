@@ -1,6 +1,6 @@
-<?php include 'views/partials/header.php' ?>
+<?php include  __DIR__ . '/partials/header.php' ?>
 
 <h1>Tech news</h1>
-<?php include 'views/partials/posts.php' ?>
+<?php include  __DIR__ .  '/partials/posts.php' ?>
 
-<?php include 'views/partials/pagefoot.php' ?>
+<?php include  __DIR__ . '/partials/pagefoot.php' ?>

@@ -4,7 +4,7 @@
     <h1>Hello <?=$name?>!</h1>
 <?php endif; ?>
 
-<a href="/form?name=Kaspar">Say hello</a>
+<a href="/form?name=Ursula">Say hello</a>
 
 <form action="/answer?age=31" method="POST">
     <input type="text" name="name">

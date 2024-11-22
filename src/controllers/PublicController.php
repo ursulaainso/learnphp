@@ -13,6 +13,7 @@ class PublicController {
 
     public function us() {
         $posts = Post::all();
+        dump($posts);
         view('us', compact('posts'));
     }
 

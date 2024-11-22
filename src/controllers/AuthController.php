@@ -39,7 +39,7 @@ class AuthController {
             redirect('/login');
         }
     }
-
+    
     public function logout(){
         unset($_SESSION['userId']);
         redirect('/');

@@ -14,9 +14,19 @@ class PostController {
         view('posts/create');
     }
     public function store(){
+        
         $post = new Post();
         $post->title = $_POST['title'];
         $post->body = $_POST['body'];
+        if(isset($_FILES['image'])){
+            do {
+                $extention = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+                dump(microtime() . rand(0, PHP_INT_MAX) . $_FILES['image']['name']);
+                $filename = md5(microtime() . rand(0, PHP_INT_MAX) . $_FILES['image']['name']) . ".$extention";
+            } while(file_exists(__DIR__ . '/../../public/uploads/'. $filename));
+            move_uploaded_file($_FILES['image']['tmp_name'], __DIR__ . '/../../public/uploads/'. $filename);
+            $post->image = "/uploads/$filename";
+        }
         $post->save();
         redirect('/admin/posts');
     }
