@@ -1,0 +1,16 @@
+{
+    "name": "ursula/learnphp",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Ursula\\Learnphp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ursula Ainso",
+            "email": "ursulaainso@gmail.com"
+        }
+    ],
+    "require": {}
+}
