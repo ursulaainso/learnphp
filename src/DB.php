@@ -26,7 +26,7 @@ class DB
       $stmt->execute();
       // set the resulting array to associative
       $stmt->setFetchMode(PDO::FETCH_CLASS, $class);
-      //return $stmt->fetchAll();
+      return $stmt->fetchAll();
    }
 
 

@@ -6,19 +6,17 @@ use App\Models\Post;
 
 class PostController
 {
-   public function index()
-   {
+   public function index() {
       $posts = Post::all();
       view('posts/index', compact('posts'));
    }
 
-   public function create()
-   {
+   public function create() {
       view('posts/create');
    }
 
-   public function store()
-   {
+   public function store() {
+
       $post = new Post();
       $post->title = $_POST['title'];
       $post->body = $_POST['body'];
@@ -26,8 +24,8 @@ class PostController
       redirect('/admin/posts');
    }
 
-   public function show()
-   {
+   public function show() {
+      
       $post = Post::find($_GET['id']);
       if (!$post) {
          http_response_code(404);

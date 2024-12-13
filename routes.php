@@ -18,7 +18,7 @@ Route::post('/answer', [PublicController::class, 'answer']);
 //admin - posts
 Route::get('/admin/posts', [PostController::class, 'index']);
 Route::get('/admin/posts/create', [PostController::class, 'create']);
-Route::post('/admin/posts', [PostController::class, 'store']); //et vormi vastuseid näha
+Route::post('/admin/posts', [PostController::class, 'store']); 
 Route::get('/admin/posts/show', [PostController::class, 'show']);
 Route::get('/admin/posts/edit', [PostController::class, 'edit']);
 Route::post('/admin/posts/edit', [PostController::class, 'update']);
